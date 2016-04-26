@@ -17,8 +17,16 @@ namespace MVC_Lab1.Controllers
         {
             return View();
         }
-        public ActionResult Live()
+        public ActionResult Live(int? id)
         {
+            if (id !=null)
+            {
+                ViewBag.Amount = id;
+            }
+            else
+            {
+                ViewBag.Amount = "";
+            }
             return View();
         }
     }
